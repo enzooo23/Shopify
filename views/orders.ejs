@@ -1,0 +1,11 @@
+<h1>Orders</h1>
+<div>
+  <canvas id="orders-chart"></canvas>
+</div>
+
+<script>
+  const ctx = document.getElementById('orders-chart').getContext('2d');
+  const chart = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: <%= data.map(order =>
